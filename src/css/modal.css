@@ -1,0 +1,304 @@
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-overlay.is-open {
+  display: block;
+}
+
+.modal-overlay .modal-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clr-white);
+  padding: 56px 20px;
+  border-radius: 16px;
+  z-index: 1000;
+  width: 335px;
+  max-height: 90vh;
+  overflow-y: hidden;
+}
+
+@media (max-width: 335px) {
+  .modal-overlay .modal-box {
+    width: 100%;
+  }
+}
+
+.modal-overlay .modal-dismiss-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-overlay .modal-dismiss-btn svg {
+  fill: var(--clr-black);
+  padding: 8px;
+}
+
+.modal-overlay .modal-body.view-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 100%;
+}
+
+.modal-overlay .product-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.modal-overlay .product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modal-overlay .product-name {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.modal-overlay .product-price {
+  width: fit-content;
+  padding-right: 16px;
+  border-right: 1px solid color-mix(in srgb, var(--clr-black) 15%, transparent);
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.modal-overlay .product-desc {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modal-overlay .buy-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 8px;
+  gap: 16px;
+}
+
+.modal-overlay .buy-row .btn {
+  width: 100%;
+  height: 44px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.modal-overlay .qty-field {
+  width: 64px;
+  height: 44px;
+  border: 1px solid color-mix(in srgb, var(--clr-black) 15%, transparent);
+  border-radius: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  .modal-overlay .modal-box {
+    padding: 64px 32px;
+    width: 704px;
+    max-width: unset;
+  }
+
+  .modal-overlay .modal-body.view-mode {
+    flex-direction: row;
+  }
+
+  .modal-overlay .product-photo {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .modal-overlay .product-details {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal-overlay .modal-box {
+    padding: 64px 64px;
+    width: 1280px;
+  }
+
+  .modal-overlay .product-photo {
+    width: 50%;
+  }
+
+  .modal-overlay .product-details {
+    width: 50%;
+  }
+
+  .modal-overlay .modal-body.view-mode {
+    gap: 80px;
+  }
+}
+
+/* Форма замовлення */
+.modal-overlay .modal-body.form-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  height: 100%;
+}
+
+.modal-overlay .form-heading {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.modal-overlay .order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modal-overlay .field-label {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  transition: transform 0.2s ease;
+}
+
+.modal-overlay .field-label.focused {
+  transform: translateY(-4px);
+}
+
+.modal-overlay .field-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid color-mix(in srgb, var(--clr-black) 15%, transparent);
+  border-radius: 16px;
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 8px 12px;
+}
+
+.modal-overlay .field-input#order-comment {
+  height: 120px;
+  resize: none;
+}
+
+.modal-overlay .order-form .submit-btn {
+  width: 295px;
+  height: 44px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .modal-overlay .order-form .submit-btn {
+    width: 340px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal-overlay .order-form .submit-btn {
+    width: 159px;
+  }
+}
+
+.modal-overlay .field-input:focus,
+.modal-overlay .field-input:focus-visible {
+  border: 2px solid var(--clr-black);
+  outline: none;
+}
+
+.modal-overlay .form-field {
+  position: relative;
+}
+
+.field-err {
+  display: block;
+  opacity: 1;
+  font-size: 12px;
+  color: var(--clr-danger);
+  margin-top: 4px;
+  min-height: 16px;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  position: absolute;
+  top: 100%;
+  z-index: -1;
+}
+
+.field-err.hidden-el {
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+}
+
+.field-input.has-error {
+  border-color: var(--clr-danger);
+  outline-color: var(--clr-danger);
+}
+
+
+.modal-overlay .modal-inner {
+  max-height: calc(90vh - 112px);
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--clr-black) 25%, transparent)
+    transparent;
+}
+
+.modal-overlay .modal-inner::-webkit-scrollbar {
+  width: 4px;
+  display: block;
+}
+
+.modal-overlay .modal-inner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-overlay .modal-inner::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--clr-black) 35%, transparent);
+  border-radius: 99px;
+}
+
+.modal-overlay .modal-inner::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in srgb, var(--clr-black) 60%, transparent);
+}
+
+@media (min-width: 768px) {
+  .modal-overlay .modal-inner {
+    max-height: calc(90vh - 128px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal-overlay .modal-inner {
+    max-height: calc(90vh - 128px);
+  }
+}

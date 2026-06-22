@@ -1,0 +1,11 @@
+:root {
+    --clr-white: #ffffff;
+    --clr-black: #030C01;
+    --clr-yellow: #EEEE60;
+    --clr-btn-yellow: #E8E81C;
+    --clr-btn-green: #42ED13;
+    --clr-danger: #AF0000;
+
+    --lh-title: 1.2;
+    --lh-text: 1.5;
+}

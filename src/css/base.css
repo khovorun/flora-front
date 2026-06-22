@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Roboto", sans-serif;
+  color: var(--clr-black);
+  line-height: var(--lh-text);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--clr-white);
+  overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 64px 20px;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    max-width: 768px;
+    padding: 64px 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrap {
+    max-width: 1440px;
+    padding: 92px 80px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Hanuman", serif;
+  line-height: var(--lh-title);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+@media (min-width: 1440px) {
+  h2 {
+    font-size: 48px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-black);
+  font-weight: 500;
+  border-radius: 32px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+button.arrow-btn {
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--clr-black), transparent 85%);
+  background-color: var(--clr-white);
+}
+
+button.arrow-btn:hover {
+  background-color: #D9FBCF;
+  opacity: 1;
+}
+
+button.arrow-btn:active {
+  background-color: #7af259;
+  opacity: 1;
+}
+
+.btn.gradient-btn {
+  background: linear-gradient(90deg, var(--clr-btn-yellow) 0%, var(--clr-btn-green) 100%);
+}
+
+.hidden-el {
+  display: none;
+}
+
+/* Кнопка "прокрутити вгору" */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--clr-btn-yellow) 0%, var(--clr-btn-green) 100%);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-top-btn:hover {
+  opacity: 0.8;
+}
+
+.scroll-top-btn svg {
+  transform: rotate(90deg);
+  fill: var(--clr-black);
+}

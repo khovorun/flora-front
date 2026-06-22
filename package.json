@@ -1,0 +1,36 @@
+{
+  "name": "flora-front",
+  "version": "1.0.0",
+  "description": "Сайт квіткового магазину ФЛОРА",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/flora-front/",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khovorun/flora-front.git"
+  },
+  "keywords": [],
+  "author": "khovorun",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/khovorun/flora-front/issues"
+  },
+  "homepage": "https://github.com/khovorun/flora-front#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "glob": "^13.0.6",
+    "postcss-sort-media-queries": "^6.5.0",
+    "vite": "^8.0.8",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2"
+  },
+  "dependencies": {
+    "izitoast": "^1.4.0",
+    "swiper": "^12.1.4"
+  }
+}

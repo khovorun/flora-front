@@ -1,0 +1,113 @@
+.catalog-block .wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog-block .section-title {
+  width: 100%;
+  text-align: center;
+}
+
+.catalog-block .catalog-subtitle {
+  width: 100%;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.catalog-block .catalog-grid {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.catalog-block .catalog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  position: relative;
+}
+
+.catalog-block .catalog-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  z-index: 9;
+  transition: transform 0.3s ease-in-out;
+}
+
+.catalog-block .card-img {
+  width: 100%;
+  height: 296px;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+.catalog-block .card-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.catalog-block .card-title {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.catalog-block .card-desc {
+  font-size: 14px;
+  text-align: center;
+}
+
+.catalog-block .card-price {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+.catalog-block .btn {
+  width: 100%;
+  height: 44px;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .catalog-block .catalog-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 9px;
+    column-gap: 24px;
+  }
+
+  .catalog-block .catalog-card {
+    width: 340px;
+  }
+
+  .catalog-block .btn {
+    width: 340px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .catalog-block .catalog-grid {
+    row-gap: 64px;
+    column-gap: 32px;
+  }
+
+  .catalog-block .catalog-card {
+    width: 296px;
+  }
+
+  .catalog-block .btn {
+    width: 406px;
+  }
+}

@@ -1,0 +1,13 @@
+@import "./variables.css";
+@import "./base.css";
+
+@import "./header.css";
+@import "./footer.css";
+
+@import "./hero.css";
+@import "./about.css";
+@import "./bestsellers.css";
+@import "./catalog.css";
+@import "./reviews.css";
+@import "./contacts.css";
+@import "./modal.css";

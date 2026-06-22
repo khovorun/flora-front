@@ -1,0 +1,149 @@
+.bestsellers-block .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.bestsellers-block .section-title {
+  font-size: 32px;
+  width: 100%;
+}
+
+.slides-swiper .swiper-button-prev::after,
+.slides-swiper .swiper-button-next::after {
+  display: none;
+}
+
+.slides-swiper .swiper-button-prev,
+.slides-swiper .swiper-button-next {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.slides-swiper .swiper-pagination {
+  position: static;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slides-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--clr-black);
+  opacity: 0.2;
+  margin: 0;
+}
+
+.slides-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.bestsellers-block .slides-nav {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.bestsellers-block .slides-swiper {
+  width: 100%;
+}
+
+.bestsellers-block .slides-arrows {
+  display: flex;
+  display: none;
+  align-items: center;
+  gap: 16px;
+  height: 48px;
+}
+
+.bestsellers-block .arrow-icon {
+  padding: 12px;
+  position: static;
+  fill: var(--clr-black);
+  width: 48px;
+  height: 48px;
+}
+.bestsellers-block .slides-arrows .arrow-btn {
+  position: static;
+  margin: 0;
+  width: 48px;
+  height: 48px;
+  top: auto;
+  left: auto;
+  right: auto;
+  transform: none;
+}
+
+.bestsellers-block .slides-arrows .arrow-btn::after {
+  display: none;
+}
+
+.bestsellers-block .slide-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  box-sizing: border-box;
+  padding-bottom: 21px;
+  position: relative;
+}
+
+.bestsellers-block .slide-card:hover {
+  cursor: pointer;
+}
+
+.bestsellers-block .slide-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+.bestsellers-block .slide-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.bestsellers-block .slide-name {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+.bestsellers-block .slide-desc {
+  font-size: 14px;
+}
+
+.bestsellers-block .slide-price {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .bestsellers-block .section-title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bestsellers-block .section-title {
+    font-size: 48px;
+  }
+
+  .bestsellers-block .slides-nav {
+    display: flex;
+    margin-top: 28px;
+  }
+  .bestsellers-block .slides-arrows  {
+    display: flex;
+  }
+}
